@@ -293,15 +293,15 @@ function get_sets()
 			   --Camouflage Sets--
 			   sets.Midshot.Camouflage = {}
 			   
-			   sets.Midshot.FailNot.Camouflage = sets.Midshot.Gandiva.AM
+			   sets.Midshot.FailNot.Camouflage = set_combine(sets.Midshot.Gandiva.AM,{legs="Darraigner's Brais",feet="Thereoid Greaves"})
 			   
-			   sets.Midshot.Fomalhaut.Camouflage = sets.Midshot.Gandiva.AM
+			   sets.Midshot.Fomalhaut.Camouflage = set_combine(sets.Midshot.Gandiva.AM,{legs="Darraigner's Brais",feet="Thereoid Greaves"})
 			   
-			   sets.Midshot.Annihilator.Camouflage = sets.Midshot.Gandiva.AM
+			   sets.Midshot.Annihilator.Camouflage = set_combine(sets.Midshot.Gandiva.AM,{legs="Darraigner's Brais",feet="Thereoid Greaves"})
 			   
-			   sets.Midshot.Gastraphetes.Camouflage = sets.Midshot.Gandiva.AM
+			   sets.Midshot.Gastraphetes.Camouflage = set_combine(sets.Midshot.Gandiva.AM,{legs="Darraigner's Brais",feet="Thereoid Greaves"})
 			   
-			   sets.Midshot.Gandiva.Camouflage = sets.Midshot.Gandiva.AM
+			   sets.Midshot.Gandiva.Camouflage = set_combine(sets.Midshot.Gandiva.AM,{legs="Darraigner's Brais",feet="Thereoid Greaves"})
 				
 				-- PDT/MDT Sets --
                 sets.PDT = {
