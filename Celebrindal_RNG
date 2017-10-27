@@ -205,7 +205,7 @@ function get_sets()
 				
 				-- Armageddon Sets --
                 sets.Midshot.Armageddon = {
-                                range="Armageddon",ammo="Chrono Bullet",head="Arcadian Beret +1",neck="Iskur Gorget",ear1="Dedition Earring",ear2="Telos Earring",body="Orion Jerkin +3",hands="Adhemar wristbands",ring1="Ilabrat Ring",ring2="Regal Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10',}},waist="Kwahu Kachina Belt",legs="Adhemar Kecks +1",feet="Adhe. Gamashes +1"}
+                                range="Armageddon",ammo="Chrono Bullet",head="Arcadian Beret +1",neck="Iskur Gorget",ear1="Dedition Earring",ear2="Telos Earring",body="Orion Jerkin +3",hands="Adhemar wristbands",ring1="Ilabrat Ring",ring2="Regal Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10',}},waist="Yemaya Belt",legs="Adhemar Kecks +1",feet="Adhe. Gamashes +1"}
                
                 sets.Midshot.Armageddon.MidACC =  {head="Meghanada Visor +2",neck="Iskur Gorget",ear1="Enervating Earring",ear2="Telos Earring",body="Mummu Jacket +2",hands="Kobo Kote",ring1="Begrudging Ring",ring2="Mummu Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','Crit.hit rate+10',}},waist="Kwahu Kachina Belt",legs="Adhemar Kecks +1",feet="Adhe. Gamashes +1"}
                
