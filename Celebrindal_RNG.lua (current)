@@ -149,7 +149,7 @@ function get_sets()
 				
 				sets.Midshot.HighACC = set_combine(sets.Midshot.MidACC,{body="Orion Jerkin +3",
 				                head="Orion Beret +3",ring1="Regal Ring",ring2="Cacoethic Ring +1"})
-				sets.Midshot.Aftermath = set_combine(sets.Midshot,{body="Arc. Jerkin +1",ear1="Dedition Earring"})
+				sets.Midshot.Aftermath = set_combine(sets.Midshot,{body="Arc. Jerkin +3",ear1="Dedition Earring"})
          
                 -- Fail-Not Sets --
                 sets.Midshot.FailNot = {
@@ -163,7 +163,7 @@ function get_sets()
                
                 sets.Midshot.FailNot.HighACC = set_combine(sets.Midshot.FailNot.MidACC,{body="Orion Jerkin +3",
                                 head="Orion Beret +3",ring1="Regal Ring",ring2="Cacoethic Ring +1"})
-				sets.Midshot.FailNot.Aftermath = set_combine(sets.Midshot.FailNot,{body="Arc. Jerkin +1",ear1="Dedition Earring"})
+				sets.Midshot.FailNot.Aftermath = set_combine(sets.Midshot.FailNot,{body="Arc. Jerkin +3",ear1="Dedition Earring"})
 				
 				-- Yoichinoyumi Sets --
 				sets.Midshot.Yoichinoyumi = {
@@ -189,7 +189,7 @@ function get_sets()
                
                 sets.Midshot.Fomalhaut.HighACC = set_combine(sets.Midshot.Fomalhaut.MidACC,{body="Orion Jerkin +3",
                                 head="Orion Beret +3",feet="Orion Socks +3",ring2="Regal Ring"})
-				sets.Midshot.Fomalhaut.Aftermath = set_combine(sets.Midshot.Fomalhaut,{body="Arc. Jerkin +1",ear1="Dedition Earring"})
+				sets.Midshot.Fomalhaut.Aftermath = set_combine(sets.Midshot.Fomalhaut,{body="Arc. Jerkin +3",ear1="Dedition Earring"})
 
 				-- Gastraphetes Sets --
 				sets.Midshot.Gastraphetes = {
