@@ -1,6 +1,6 @@
 function get_sets()
                 AccIndex = 1
-                AccArray = {"LowACC","MidACC","HighACC","Aftermath"}
+                AccArray = {"LowACC","MidACC","HighACC","Aftermath","PDL"}
                 IdleIndex = 1
                 IdleArray = {'Movement', 'Regen','Town'}				-- Default Idle Set Is Movement --
                 PreshotIndex = 1
@@ -30,16 +30,16 @@ function get_sets()
                                 body="Meghanada Cuirie +2",hands="Meg. Gloves +2",ring1="Meghanada Ring",ring2="Defending Ring",ear1="Infused Earring",ear2="Genmei earring",
                                 back="Moonlight Cape",waist="Flume Belt +1",legs="Meg. Chausses +2",feet="Meg. Jam. +2"}
                 sets.Idle.Movement = {
-								head="Meghanada Visor +2",
-								body="Meg. Cuirie +2",
+								head="Malignance Chapeau",
+								body="Malignance Tabard",
 								hands="Regal Gloves",
-								legs="Mummu Kecks +2",
-								feet="Jute Boots +1",
+								legs="Carmine Cuisses +1",
+								feet="Malignance Boots",
 								neck="Loricate Torque +1",
 								waist="Flume Belt +1",
 								right_ear="Genmei Earring",
 								left_ear="Etiolation Earring",
-								left_ring="Patricius Ring",
+								left_ring="Meghanada Ring",
 								right_ring="Defending Ring",
 								back="Moonlight Cape"}
 				sets.Idle.Town = {
@@ -50,7 +50,7 @@ function get_sets()
 								head="Arcadian Beret +3",
 								body="Nisroch Jerkin",
 								hands="Regal Gloves",
-								legs="Arc. Braccae +3",
+								legs="Volte Hose",
 								feet="Orion Socks +3",
 								neck="Scout's Gorget +1",
 								waist="K. Kachina Belt +1",
@@ -62,19 +62,21 @@ function get_sets()
          
                 sets.Gastraphetes = {main={ name="Malevolence", augments={'INT+10','Mag. Acc.+10','"Mag.Atk.Bns."+10','"Fast Cast"+5',}},sub={ name="Malevolence", augments={'INT+9','Mag. Acc.+10','"Mag.Atk.Bns."+9','"Fast Cast"+4',}},range="Gastraphetes",ammo="Quelling Bolt",waist="Quelling B. Quiver"}
 				
-				sets.Fomalhaut = {main="Perun +1",sub="Nusku Shield",range="Fomalhaut",ammo="Chrono Bullet"}
+				sets.Fomalhaut = {main="Perun +1",sub="Odium",range="Fomalhaut",ammo="Chrono Bullet"}
 				
 				sets.FailNot = {main="Kustawi +1",sub="Nusku Shield",range="Fail-Not",ammo="Chrono Arrow"}
 				
-				sets.Annihilator = {main="Perun +1",sub="Nusku Shield",range="Annihilator",ammo="Chrono Bullet"}
+				sets.Annihilator = {main="Perun +1",sub="Odium",range="Annihilator",ammo="Chrono Bullet"}
 				
-				sets.Gandiva = {main="Oneiros Knife",sub="Nusku Shield",range="Gandiva",ammo="Chrono Arrow"}
+				sets.Gandiva = {main="Oneiros Knife",sub="Tauret",range="Gandiva",ammo="Chrono Arrow"}
 				
-				sets.Armageddon = {main="Perun +1",sub="Nusku Shield",range="Armageddon",ammo="Chrono Bullet",waist="Dev. Bul. Pouch"}
+				sets.Armageddon = {main="Perun +1",sub="Tauret",range="Armageddon",ammo="Chrono Bullet",waist="Dev. Bul. Pouch"}
 				
 				sets.Yoichinoyumi = {main="Kustawi +1",sub="Nusku Shield",range="Yoichinoyumi",ammo="Artemis's Arrow"}
 				
-				sets.Closeup = {main="Kustawi +1",sub="Ternion Dagger +1"}
+				sets.Axe = {main="Dolichenus",sub="Ternion Dagger +1"}
+				
+				sets.Dagger = {main="Tauret",sub="Ternion Dagger +1"}
 				
 				sets.Staff = {main="Chatoyant Staff",sub="Alber Strap"}
 				
@@ -150,20 +152,24 @@ function get_sets()
 				sets.Midshot.HighACC = set_combine(sets.Midshot.MidACC,{body="Orion Jerkin +3",
 				                head="Orion Beret +3",ring1="Regal Ring",ring2="Cacoethic Ring +1"})
 				sets.Midshot.Aftermath = set_combine(sets.Midshot,{body="Arc. Jerkin +3",ear1="Dedition Earring"})
+				
+				sets.Midshot.PDL = set_combine(sets.Midshot,{neck="Scout's Gorget +1",body="Malignance Tabard",legs="Malignance Tights",feet="Malignance Boots"})
          
                 -- Fail-Not Sets --
                 sets.Midshot.FailNot = {
                                 range="Fail-Not",ammo="Chrono Arrow",
-                                head="Arcadian Beret +3",neck="Iskur Gorget",ear1="Dedition Earring",ear2="Telos Earring",
+                                head="Arcadian Beret +3",neck="Scout's Gorget +1",ear1="Dedition Earring",ear2="Telos Earring",
                                 body="Nisroch Jerkin",hands="Amini Glove. +1",ring1="Ilabrat Ring",ring2="Dingir Ring",
                                 back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','"Store TP"+10','Damage taken-5%',}},waist="K. Kachina Belt +1",legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},feet={ name="Herculean Boots", augments={'Rng.Acc.+24 Rng.Atk.+24','"Subtle Blow"+10','STR+6','Rng.Acc.+2','Rng.Atk.+15',}}}
                
                 sets.Midshot.FailNot.MidACC = set_combine(sets.Midshot.FailNot,{
-								ear1="Enervating Earring"})
+								feet="Malignance Boots"})
                
                 sets.Midshot.FailNot.HighACC = set_combine(sets.Midshot.FailNot.MidACC,{body="Orion Jerkin +3",
-                                head="Orion Beret +3",ring1="Regal Ring",ring2="Cacoethic Ring +1"})
+                                ring1="Regal Ring",ring2="Cacoethic Ring +1"})
 				sets.Midshot.FailNot.Aftermath = set_combine(sets.Midshot.FailNot,{body="Arc. Jerkin +3",ear1="Dedition Earring"})
+				
+				sets.Midshot.FailNot.PDL = set_combine(sets.Midshot.FailNot,{neck="Scout's Gorget +1",legs="Malignance Tights",feet="Malignance Boots"})
 				
 				-- Yoichinoyumi Sets --
 				sets.Midshot.Yoichinoyumi = {
@@ -173,63 +179,75 @@ function get_sets()
                                 back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','"Store TP"+10','Damage taken-5%',}},waist="K. Kachina Belt +1",legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},feet="Adhe. Gamashes +1"}
                
                 sets.Midshot.Yoichinoyumi.MidACC = set_combine(sets.Midshot.Yoichinoyumi,{
-								ear1="Enervating Earring"})
+								feet="Malignance Boots"})
                
                 sets.Midshot.Yoichinoyumi.HighACC = set_combine(sets.Midshot.Yoichinoyumi.MidACC,{body="Orion Jerkin +3",
-                                head="Orion Beret +3",ring2="Regal Ring",ring2="Cacoethic Ring +1"})
+                                ring2="Regal Ring",ring2="Cacoethic Ring +1"})
 				sets.Midshot.Yoichinoyumi.Aftermath = set_combine(sets.Midshot.Yoichinoyumi,{body="Nisroch Jerkin",hands="Mummu Wrists +2",ring2="Mummu Ring"})
+				
+				sets.Midshot.Yoichinoyumi.PDL = set_combine(sets.Midshot.Yoichinoyumi,{neck="Scout's Gorget +1",legs="Malignance Tights",feet="Malignance Boots"})
 				
 				
 				-- Fomalhaut Sets --
                 sets.Midshot.Fomalhaut = {
-                                range="Fomalhaut",ammo="Chrono Bullet",head="Arcadian Beret +3",neck="Iskur Gorget",ear1="Dedition Earring",ear2="Telos Earring",body="Nisroch Jerkin",hands="Adhemar Wrist. +1",ring1="Ilabrat Ring",ring2="Rajas Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','"Store TP"+10','Damage taken-5%',}},waist="K. Kachina Belt +1",legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},feet="Adhe. Gamashes +1"}
+                                range="Fomalhaut",ammo="Chrono Bullet",head="Arcadian Beret +3",neck="Scout's Gorget +1",ear1="Dedition Earring",ear2="Telos Earring",body="Nisroch Jerkin",hands="Adhemar Wrist. +1",ring1="Ilabrat Ring",ring2="Rajas Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','"Store TP"+10','Damage taken-5%',}},waist="K. Kachina Belt +1",legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},feet="Adhe. Gamashes +1"}
                
                 sets.Midshot.Fomalhaut.MidACC = set_combine(sets.Midshot.Fomalhaut,{
-								ear1="Enervating Earring"})
+								feet="Malignance Boots"})
                
                 sets.Midshot.Fomalhaut.HighACC = set_combine(sets.Midshot.Fomalhaut.MidACC,{body="Orion Jerkin +3",
-                                head="Orion Beret +3",feet="Orion Socks +3",ring2="Regal Ring"})
+                                ring2="Regal Ring"})
 				sets.Midshot.Fomalhaut.Aftermath = set_combine(sets.Midshot.Fomalhaut,{body="Arc. Jerkin +3",ear1="Dedition Earring"})
+				
+				sets.Midshot.Fomalhaut.PDL = set_combine(sets.Midshot.Fomalhaut,{neck="Scout's Gorget +1",legs="Malignance Tights",feet="Malignance Boots"})
 
 				-- Gastraphetes Sets --
 				sets.Midshot.Gastraphetes = {
-                                range="Gastraphetes",head="Arcadian Beret +3",neck="Iskur Gorget",ear1="Dedition Earring",ear2="Telos Earring",body="Nisroch Jerkin",hands="Adhemar Wrist. +1",ring1="Ilabrat Ring",ring2="Rajas Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','"Store TP"+10','Damage taken-5%',}},waist="Yemaya Belt",legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},feet="Adhe. Gamashes +1"}
+                                range="Gastraphetes",head="Arcadian Beret +3",neck="Iskur Gorget",ear1="Dedition Earring",ear2="Telos Earring",body="Nisroch Jerkin",hands="Adhemar Wrist. +1",ring1="Ilabrat Ring",ring2="Dingir Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','"Store TP"+10','Damage taken-5%',}},waist="Yemaya Belt",legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},feet="Adhe. Gamashes +1"}
                
                 sets.Midshot.Gastraphetes.MidACC = set_combine(sets.Midshot.Gastraphetes,{
-								ear1="Enervating Earring"})
+								feet="Malignance Boots"})
                
                 sets.Midshot.Gastraphetes.HighACC = set_combine(sets.Midshot.Gastraphetes.MidACC,{body="Orion Jerkin +3",
-                                head="Orion Beret +3",feet="Orion Socks +3",ring2="Regal Ring"})
+                                ring2="Regal Ring"})
 				sets.Midshot.Gastraphetes.Aftermath = set_combine(sets.Midshot.Gastraphetes,{body="Nisroch Jerkin",hands="Mummu Wrists +2",ring2="Mummu Ring"})
 				
+				sets.Midshot.Gastraphetes.PDL = set_combine(sets.Midshot.Gastraphetes,{neck="Scout's Gorget +1",body="Malignance Tabard",legs="Malignance Tights",feet="Malignance Boots"})
+				
 				-- Annihilator Sets --
-				sets.Midshot.Annihilator = {range="Annihilator",ammo="Chrono Bullet",head="Arcadian Beret +3",neck="Iskur Gorget",ear1="Dedition Earring",ear2="Telos Earring",body="Nisroch Jerkin",hands="Adhemar Wrist. +1",ring1="Ilabrat Ring",ring2="Rajas Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','"Store TP"+10','Damage taken-5%',}},waist="Yemaya Belt",legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},feet="Adhe. Gamashes +1"}
+				sets.Midshot.Annihilator = {range="Annihilator",ammo="Chrono Bullet",head="Arcadian Beret +3",neck="Scout's Gorget +1",ear1="Dedition Earring",ear2="Telos Earring",body="Nisroch Jerkin",hands="Adhemar Wrist. +1",ring1="Ilabrat Ring",ring2="Rajas Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','"Store TP"+10','Damage taken-5%',}},waist="Yemaya Belt",legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},feet="Adhe. Gamashes +1"}
 				
-				sets.Midshot.Annihilator.MidACC = set_combine(sets.Midshot.Annihilator,{ear1="Enervating Earring"})
+				sets.Midshot.Annihilator.MidACC = set_combine(sets.Midshot.Annihilator,{feet="Malignance Boots"})
 				
-				sets.Midshot.Annihilator.HighACC = set_combine(sets.Midshot.Annihilator.MidACC,{body="Orion Jerkin +3",head="Orion Beret +3",feet="Orion Socks +3",ring2="Regal Ring"})
+				sets.Midshot.Annihilator.HighACC = set_combine(sets.Midshot.Annihilator.MidACC,{body="Orion Jerkin +3",ring2="Regal Ring"})
 				
-				sets.Midshot.Annihilator.Aftermath = set_combine(sets.Midshot.Annihilator,{body="Nisroch Jerkin",hands="Mummu Wrists +2",ring2="Mummu Ring"})
+				sets.Midshot.Annihilator.Aftermath = set_combine(sets.Midshot.Annihilator,{body="Nisroch Jerkin",hands="Mummu Wrists +2",ring2="Mummu Ring",waist="K. Kachina Belt +1",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Crit.hit rate+10','Damage taken-5%',}},})
+				
+				sets.Midshot.Annihilator.PDL = set_combine(sets.Midshot.Annihilator,{neck="Scout's Gorget +1",legs="Malignance Tights",feet="Malignance Boots"})
 				
 				-- Gandiva Sets --
-				sets.Midshot.Gandiva = {range="Gandiva",head="Arcadian Beret +3",neck="Iskur Gorget",ear1="Dedition Earring",ear2="Telos Earring",body="Nisroch Jerkin",hands="Amini Glove. +1",ring1="Ilabrat Ring",ring2="Rajas Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','"Store TP"+10','Damage taken-5%',}},waist="K. Kachina Belt +1",legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},feet="Adhe. Gamashes +1"}
+				sets.Midshot.Gandiva = {range="Gandiva",head="Arcadian Beret +3",neck="Scout's Gorget +1",ear1="Dedition Earring",ear2="Telos Earring",body="Nisroch Jerkin",hands="Amini Glove. +1",ring1="Ilabrat Ring",ring2="Rajas Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','"Store TP"+10','Damage taken-5%',}},waist="K. Kachina Belt +1",legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},feet="Adhe. Gamashes +1"}
 				
-				sets.Midshot.Gandiva.MidACC = set_combine(sets.Midshot.Gandiva,{ear1="Enervating Earring"})
+				sets.Midshot.Gandiva.MidACC = set_combine(sets.Midshot.Gandiva,{feet="Malignance Boots"})
 				
-				sets.Midshot.Gandiva.HighACC = set_combine(sets.Midshot.Gandiva.MidACC,{body="Orion Jerkin +3",head="Orion Beret +3",feet="Orion Socks +3",ring2="Regal Ring"})
+				sets.Midshot.Gandiva.HighACC = set_combine(sets.Midshot.Gandiva.MidACC,{body="Orion Jerkin +3",ring2="Regal Ring"})
 				
-				sets.Midshot.Gandiva.Aftermath = {head="Meghanada Visor +2",neck="Iskur Gorget",ear1="Enervating Earring",ear2="Telos Earring",body="Nisroch Jerkin",hands="Mummu Wrists +2",ring1="Begrudging Ring",ring2="Mummu Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','Crit.hit rate+10','Damage taken-5%',}},waist="K. Kachina Belt +1",legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},feet="Adhe. Gamashes +1"}
+				sets.Midshot.Gandiva.Aftermath = {head="Meghanada Visor +2",neck="Iskur Gorget",ear1="Enervating Earring",ear2="Telos Earring",body="Nisroch Jerkin",hands="Mummu Wrists +2",ring1="Begrudging Ring",ring2="Mummu Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Crit.hit rate+10','Damage taken-5%',}},waist="K. Kachina Belt +1",legs="Darraigner's Brais",feet="Osh. Leggings +1"}
+				
+				sets.Midshot.Gandiva.PDL = set_combine(sets.Midshot.Gandiva.Aftermath,{neck="Scout's Gorget +1",legs="Malignance Tights"})
 				
 				-- Armageddon Sets --
                 sets.Midshot.Armageddon = {
-                                range="Armageddon",ammo="Chrono Bullet",head="Arcadian Beret +3",neck="Iskur Gorget",ear1="Dedition Earring",ear2="Telos Earring",body="Nisroch Jerkin",hands="Adhemar Wrist. +1",ring1="Ilabrat Ring",ring2="Rajas Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','"Store TP"+10','Damage taken-5%',}},waist="Yemaya Belt",legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},feet="Adhe. Gamashes +1"}
+                                range="Armageddon",ammo="Chrono Bullet",head="Arcadian Beret +3",neck="Scout's Gorget +1",ear1="Dedition Earring",ear2="Telos Earring",body="Nisroch Jerkin",hands="Adhemar Wrist. +1",ring1="Ilabrat Ring",ring2="Rajas Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','"Store TP"+10','Damage taken-5%',}},waist="Yemaya Belt",legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},feet="Adhe. Gamashes +1"}
                
-                sets.Midshot.Armageddon.MidACC =  set_combine(sets.Midshot.Armageddon,{ear1="Enervating Earring"})
+                sets.Midshot.Armageddon.MidACC =  set_combine(sets.Midshot.Armageddon,{feet="Malignance Boots"})
                
                 sets.Midshot.Armageddon.HighACC = set_combine(sets.Midshot.Armageddon.MidACC,{body="Orion Jerkin +3",
-                                head="Orion Beret +3",feet="Orion Socks +3",ring2="Regal Ring"})
+                                ring2="Regal Ring"})
 								
-				sets.Midshot.Armageddon.Aftermath = {head="Meghanada Visor +2",neck="Iskur Gorget",ear1="Enervating Earring",ear2="Telos Earring",body="Nisroch Jerkin",hands="Mummu Wrists +2",ring1="Begrudging Ring",ring2="Mummu Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','Crit.hit rate+10','Damage taken-5%',}},waist="K. Kachina Belt +1",legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},feet="Adhe. Gamashes +1"}				
+				sets.Midshot.Armageddon.Aftermath = {head="Meghanada Visor +2",neck="Scout's Gorget +1",ear1="Enervating Earring",ear2="Telos Earring",body="Nisroch Jerkin",hands="Mummu Wrists +2",ring1="Begrudging Ring",ring2="Mummu Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Crit.hit rate+10','Damage taken-5%',}},waist="K. Kachina Belt +1",legs="Darraigner's Brais",feet="Osh. Leggings +1"}
+
+				sets.Midshot.Armageddon.PDL = set_combine(sets.Midshot.Armageddon.Aftermath,{neck="Scout's Gorget +1",legs="Malignance Tights"})
 				
                 -- Barrage Base Set --
                 Barrage = {
@@ -246,8 +264,10 @@ function get_sets()
                                
                 sets.Midshot.FailNot.HighACC.Barrage = set_combine(sets.Midshot.FailNot.HighACC, {
 								head="Orion Beret +3",body="Nisroch Jerkin",hands="Orion Bracers +3",ring1="Regal Ring",ring2="Cacoethic Ring +1",
-                                legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},feet="Orion Socks +3"})
+                                legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},feet="Malignance Boots"})
 				sets.Midshot.FailNot.Aftermath.Barrage = sets.Midshot.FailNot.Barrage
+				
+				sets.Midshot.FailNot.PDL.Barrage = set_combine(sets.Midshot.FailNot.Barrage,{neck="Scout's Gorget +1",body="Malignance Tabard",legs="Malignance Tights",feet="Malignance Boots"})
 				
 				-- Yoichinoyumi Barrage Sets --
                 sets.Midshot.Yoichinoyumi.Barrage = set_combine(sets.Midshot.Yoichinoyumi, {
@@ -259,8 +279,10 @@ function get_sets()
                                
                 sets.Midshot.Yoichinoyumi.HighACC.Barrage = set_combine(sets.Midshot.Yoichinoyumi.HighACC, {
 								head="Orion Beret +3",body="Nisroch Jerkin",hands="Orion Bracers +3",ring1="Regal Ring",ring2="Cacoethic Ring +1",
-                                legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},feet="Orion Socks +3"})
+                                legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},feet="Malignance Boots"})
 				sets.Midshot.Yoichinoyumi.Aftermath.Barrage = sets.Midshot.Yoichinoyumi.Barrage
+				
+				sets.Midshot.Yoichinoyumi.PDL.Barrage = set_combine(sets.Midshot.Yoichinoyumi.Barrage,{neck="Scout's Gorget +1",body="Malignance Tabard",legs="Malignance Tights",feet="Malignance Boots"})
 				
                 -- Fomalhaut Barrage Sets --
                 sets.Midshot.Fomalhaut.Barrage = set_combine(sets.Midshot.Fomalhaut, {
@@ -272,8 +294,10 @@ function get_sets()
 								
                 sets.Midshot.Fomalhaut.HighACC.Barrage = set_combine(sets.Midshot.Fomalhaut.HighACC,{
                                 head="Orion Beret +3",body="Nisroch Jerkin",hands="Orion Bracers +3",ring1="Regal Ring",ring2="Cacoethic Ring +1",
-                                legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},feet="Orion Socks +3"})
+                                legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},feet="Malignance Boots"})
 				sets.Midshot.Fomalhaut.Aftermath.Barrage = sets.Midshot.Fomalhaut.Barrage
+				
+				sets.Midshot.Fomalhaut.PDL.Barrage = set_combine(sets.Midshot.Fomalhaut.Barrage,{neck="Scout's Gorget +1",body="Malignance Tabard",legs="Malignance Tights",feet="Malignance Boots"})
 				
 				-- Armageddon Barrage Sets --
 				sets.Midshot.Armageddon.Barrage = set_combine(sets.Midshot.Armageddon, {
@@ -285,8 +309,10 @@ function get_sets()
 								
                 sets.Midshot.Armageddon.HighACC.Barrage = set_combine(sets.Midshot.Armageddon.HighACC,{
                                 head="Orion Beret +3",body="Nisroch Jerkin",hands="Orion Bracers +3",ring1="Regal Ring",ring2="Cacoethic Ring +1",
-                                legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},feet="Orion Socks +3"})
-				sets.Midshot.Armageddon.Aftermath.Barrage = sets.Midshot.Armageddon.Barrage
+                                legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},feet="Malignance Boots"})
+				sets.Midshot.Armageddon.Aftermath.Barrage = set_combine(sets.Midshot.Armageddon.Barrage,{neck="Scout's Gorget +1"})
+				
+				sets.Midshot.Armageddon.PDL.Barrage = set_combine(sets.Midshot.Armageddon.Barrage,{neck="Scout's Gorget +1",body="Malignance Tabard",legs="Malignance Tights",feet="Malignance Boots"})
 				
 				-- Gastraphetes Barrage Sets --
 				sets.Midshot.Gastraphetes.Barrage = set_combine(sets.Midshot.Gastraphetes, {ammo="Quelling Bolt",
@@ -298,9 +324,11 @@ function get_sets()
 								
                 sets.Midshot.Gastraphetes.HighACC.Barrage = set_combine(sets.Midshot.Gastraphetes.HighACC,{ammo="Quelling Bolt",
                                 head="Orion Beret +3",body="Nisroch Jerkin",hands="Orion Bracers +3",ring1="Regal Ring",ring2="Cacoethic Ring +1",
-                                legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},feet="Orion Socks +3"})
+                                legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},feet="Malignance Boots"})
 				sets.Midshot.Gastraphetes.Aftermath.Barrage = sets.Midshot.Gastraphetes.Barrage
                
+			   sets.Midshot.Gastraphetes.PDL.Barrage = set_combine(sets.Midshot.Gastraphetes.Barrage,{neck="Scout's Gorget +1",body="Malignance Tabard",legs="Malignance Tights",feet="Malignance Boots"})
+			   
 			   -- Annihilator Barrage Sets --
 			   sets.Midshot.Annihilator.Barrage = set_combine(sets.Midshot.Annihilator,{head="Orion Beret +3",body="Nisroch Jerkin",hands="Orion Bracers +3",neck="Iskur Gorget",legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},ring1="Dingir Ring"})
 			   
@@ -310,9 +338,12 @@ function get_sets()
 			   
 			   sets.Midshot.Annihilator.HighACC.Barrage = set_combine(sets.Midshot.Annihilator.HighACC,{
                                 head="Orion Beret +3",body="Nisroch Jerkin",hands="Orion Bracers +3",ring1="Regal Ring",ring2="Cacoethic Ring +1",
-                                legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},feet="Orion Socks +3"})
+                                legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},feet="Malignance Boots"})
 			   
-			   sets.Midshot.Annihilator.Aftermath.Barrage = sets.Midshot.Annihilator.Barrage
+			   sets.Midshot.Annihilator.Aftermath.Barrage = set_combine(sets.Midshot.Annihilator.Barrage,{neck="Scout's Gorget +1"})
+			   
+			   sets.Midshot.Annihilator.PDL.Barrage = set_combine(sets.Midshot.Annihilator.Barrage,{neck="Scout's Gorget +1",body="Malignance Tabard",legs="Malignance Tights",feet="Malignance Boots"})
+			   
 			   --Gandiva Barrage Sets --
 			   sets.Midshot.Gandiva.Barrage = set_combine(sets.Midshot.Gandiva, {
                                 head="Orion Beret +3",body="Nisroch Jerkin",hands="Orion Bracers +3",neck="Iskur Gorget",legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},ring1="Dingir Ring"})
@@ -323,113 +354,129 @@ function get_sets()
 			   
 			   sets.Midshot.Gandiva.HighACC.Barrage = set_combine(sets.Midshot.Gandiva.HighACC,{
                                 head="Orion Beret +3",body="Nisroch Jerkin",hands="Orion Bracers +3",ring1="Regal Ring",ring2="Cacoethic Ring +1",
-                                legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},feet="Orion Socks +3"})
+                                legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},feet="Malignance Boots"})
 			   
-			   sets.Midshot.Gandiva.Aftermath.Barrage = sets.Midshot.Gandiva.Barrage
+			   sets.Midshot.Gandiva.Aftermath.Barrage = set_combine(sets.Midshot.Gandiva.Barrage,{neck="Scout's Gorget +1"})
+			   
+			   sets.Midshot.Gandiva.PDL.Barrage = set_combine(sets.Midshot.Gandiva.Barrage,{neck="Scout's Gorget +1",body="Malignance Tabard",legs="Malignance Tights",feet="Malignance Boots"})
 			   
 			   -- Doubleshot Sets --
-			   sets.Doubleshot = {head="Oshosi Mask",body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Oshosi Leggings"}
+			   sets.Doubleshot = {body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Osh. Leggings +1"}
 			   
 			   -- Fail-Not Doubleshot Sets --
-			   sets.Midshot.FailNot.Doubleshot = set_combine(sets.Midshot.FailNot,{head="Oshosi Mask",body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Oshosi Leggings"})
+			   sets.Midshot.FailNot.Doubleshot = set_combine(sets.Midshot.FailNot,{body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Osh. Leggings +1"})
 			   
-			   sets.Midshot.FailNot.MidACC.Doubleshot = set_combine(sets.Midshot.FailNot.MidACC,{head="Oshosi Mask",body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Oshosi Leggings"})
+			   sets.Midshot.FailNot.MidACC.Doubleshot = set_combine(sets.Midshot.FailNot.MidACC,{body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Osh. Leggings +1"})
 			   
-			   sets.Midshot.FailNot.HighACC.Doubleshot = set_combine(sets.Midshot.FailNot.HighACC,{head="Oshosi Mask",body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Oshosi Leggings"})
+			   sets.Midshot.FailNot.HighACC.Doubleshot = set_combine(sets.Midshot.FailNot.HighACC,{body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Osh. Leggings +1"})
 			   
-			   sets.Midshot.FailNot.Aftermath.Doubleshot = set_combine(sets.Midshot.FailNot,{head="Oshosi Mask",body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Oshosi Leggings"})
+			   sets.Midshot.FailNot.Aftermath.Doubleshot = set_combine(sets.Midshot.FailNot,{body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Osh. Leggings +1"})
+			   
+			   sets.Midshot.FailNot.PDL.Doubleshot = set_combine(sets.Midshot.FailNot.Doubleshot,{legs="Malignance Tights"})
 			   
 			   -- Yoichinoyumi Doubleshot Sets --
-			   sets.Midshot.Yoichinoyumi.Doubleshot = set_combine(sets.Midshot.Yoichinoyumi,{head="Oshosi Mask",body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Oshosi Leggings"})
+			   sets.Midshot.Yoichinoyumi.Doubleshot = set_combine(sets.Midshot.Yoichinoyumi,{body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Osh. Leggings +1"})
 			   
-			   sets.Midshot.Yoichinoyumi.MidACC.Doubleshot = set_combine(sets.Midshot.Yoichinoyumi.MidACC,{head="Oshosi Mask",body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Oshosi Leggings"})
+			   sets.Midshot.Yoichinoyumi.MidACC.Doubleshot = set_combine(sets.Midshot.Yoichinoyumi.MidACC,{body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Osh. Leggings +1"})
 			   
-			   sets.Midshot.Yoichinoyumi.HighACC.Doubleshot = set_combine(sets.Midshot.Yoichinoyumi.HighACC,{head="Oshosi Mask",body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Oshosi Leggings"})
+			   sets.Midshot.Yoichinoyumi.HighACC.Doubleshot = set_combine(sets.Midshot.Yoichinoyumi.HighACC,{body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Osh. Leggings +1"})
 			   
-			   sets.Midshot.Yoichinoyumi.Aftermath.Doubleshot = set_combine(sets.Midshot.Yoichinoyumi.Aftermath,{head="Oshosi Mask",body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Oshosi Leggings"})
+			   sets.Midshot.Yoichinoyumi.Aftermath.Doubleshot = set_combine(sets.Midshot.Yoichinoyumi.Aftermath,{body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Osh. Leggings +1"})
+			   
+			   sets.Midshot.Yoichinoyumi.PDL.Doubleshot = set_combine(sets.Midshot.Yoichinoyumi.Doubleshot,{legs="Malignance Tights"})
 			   
 			   -- Fomalhaut Doubleshot Sets --
-			   sets.Midshot.Fomalhaut.Doubleshot = set_combine(sets.Midshot.Fomalhaut,{head="Oshosi Mask",body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Oshosi Leggings"})
+			   sets.Midshot.Fomalhaut.Doubleshot = set_combine(sets.Midshot.Fomalhaut,{body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Osh. Leggings +1"})
 			   
-			   sets.Midshot.Fomalhaut.MidACC.Doubleshot = set_combine(sets.Midshot.Fomalhaut.MidACC,{head="Oshosi Mask",body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Oshosi Leggings"})
+			   sets.Midshot.Fomalhaut.MidACC.Doubleshot = set_combine(sets.Midshot.Fomalhaut.MidACC,{body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Osh. Leggings +1"})
 			   
-			   sets.Midshot.Fomalhaut.HighACC.Doubleshot = set_combine(sets.Midshot.Fomalhaut.HighACC,{head="Oshosi Mask",body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Oshosi Leggings"})
+			   sets.Midshot.Fomalhaut.HighACC.Doubleshot = set_combine(sets.Midshot.Fomalhaut.HighACC,{body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Osh. Leggings +1"})
 			   
-			   sets.Midshot.Fomalhaut.Aftermath.Doubleshot = sets.Midshot.Fomalhaut.Doubleshot
+			   sets.Midshot.Fomalhaut.Aftermath.Doubleshot = set_combine(sets.Midshot.Fomalhaut.Aftermath,{body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Osh. Leggings +1"})
+			   
+			   sets.Midshot.Fomalhaut.PDL.Doubleshot = set_combine(sets.Midshot.Fomalhaut.Doubleshot,{legs="Malignance Tights"})
 			   
 			   -- Armageddon Doubleshot Sets --
-			   sets.Midshot.Armageddon.Doubleshot = set_combine(sets.Midshot.Armageddon,{head="Oshosi Mask",body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Oshosi Leggings"})
+			   sets.Midshot.Armageddon.Doubleshot = set_combine(sets.Midshot.Armageddon,{body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Osh. Leggings +1"})
 			   
-			   sets.Midshot.Armageddon.MidACC.Doubleshot = set_combine(sets.Midshot.Armageddon.MidACC,{head="Oshosi Mask",body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Oshosi Leggings"})
+			   sets.Midshot.Armageddon.MidACC.Doubleshot = set_combine(sets.Midshot.Armageddon.MidACC,{body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Osh. Leggings +1"})
 			   
-			   sets.Midshot.Armageddon.HighACC.Doubleshot = set_combine(sets.Midshot.Armageddon.HighACC,{head="Oshosi Mask",body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Oshosi Leggings"})
+			   sets.Midshot.Armageddon.HighACC.Doubleshot = set_combine(sets.Midshot.Armageddon.HighACC,{body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Osh. Leggings +1"})
 			   
-			   sets.Midshot.Armageddon.Aftermath.Doubleshot = {head="Oshosi Mask",neck="Iskur Gorget",ear1="Enervating Earring",ear2="Telos Earring",body="Arc. Jerkin +3",hands="Mummu Wrists +2",ring1="Begrudging Ring",ring2="Mummu Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','Crit.hit rate+10','Damage taken-5%',}},waist="K. Kachina Belt +1",legs="Oshosi Trousers",feet="Oshosi Leggings"}
+			   sets.Midshot.Armageddon.Aftermath.Doubleshot = {head="Arcadian Beret +3",neck="Iskur Gorget",ear1="Enervating Earring",ear2="Telos Earring",body="Arc. Jerkin +3",hands="Mummu Wrists +2",ring1="Begrudging Ring",ring2="Mummu Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Crit.hit rate+10','Damage taken-5%',}},waist="K. Kachina Belt +1",legs="Oshosi Trousers",feet="Osh. Leggings +1"}
+			   
+			   sets.Midshot.Armageddon.PDL.Doubleshot = set_combine(sets.Midshot.Armageddon.Doubleshot,{legs="Malignance Tights"})
 			   
 			   --Gastraphetes Doubleshot Sets--
-			   sets.Midshot.Gastraphetes.Doubleshot = set_combine(sets.Midshot.Gastraphetes,{head="Oshosi Mask",body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Oshosi Leggings"})
+			   sets.Midshot.Gastraphetes.Doubleshot = set_combine(sets.Midshot.Gastraphetes,{body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Osh. Leggings +1"})
 			   
-			   sets.Midshot.Gastraphetes.MidACC.Doubleshot = set_combine(sets.Midshot.Gastraphetes.MidACC,{head="Oshosi Mask",body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Oshosi Leggings"})
+			   sets.Midshot.Gastraphetes.MidACC.Doubleshot = set_combine(sets.Midshot.Gastraphetes.MidACC,{body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Osh. Leggings +1"})
 			   
-			   sets.Midshot.Gastraphetes.HighACC.Doubleshot = set_combine(sets.Midshot.Gastraphetes.HighACC,{head="Oshosi Mask",body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Oshosi Leggings"})
+			   sets.Midshot.Gastraphetes.HighACC.Doubleshot = set_combine(sets.Midshot.Gastraphetes.HighACC,{body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Osh. Leggings +1"})
 			   
-			   sets.Midshot.Gastraphetes.Aftermath.Doubleshot = {head="Oshosi Mask",neck="Iskur Gorget",ear1="Enervating Earring",ear2="Telos Earring",body="Arc. Jerkin +3",hands="Mummu Wrists +2",ring1="Begrudging Ring",ring2="Mummu Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','Crit.hit rate+10','Damage taken-5%',}},waist="K. Kachina Belt +1",legs="Oshosi Trousers",feet="Oshosi Leggings"}
+			   sets.Midshot.Gastraphetes.Aftermath.Doubleshot = {head="Arcadian Beret +3",neck="Iskur Gorget",ear1="Enervating Earring",ear2="Telos Earring",body="Arc. Jerkin +3",hands="Mummu Wrists +2",ring1="Begrudging Ring",ring2="Mummu Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Crit.hit rate+10','Damage taken-5%',}},waist="K. Kachina Belt +1",legs="Oshosi Trousers",feet="Osh. Leggings +1"}
+			   
+			   sets.Midshot.Gastraphetes.PDL.Doubleshot = set_combine(sets.Midshot.Gastraphetes.Doubleshot,{legs="Malignance Tights"})
 			   
 			   --Annihilator Doubleshot Sets--
-			   sets.Midshot.Annihilator.Doubleshot = set_combine(sets.Midshot.Annihilator,{head="Oshosi Mask",body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Oshosi Leggings"})
+			   sets.Midshot.Annihilator.Doubleshot = set_combine(sets.Midshot.Annihilator,{body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Osh. Leggings +1"})
 			   
-			   sets.Midshot.Annihilator.MidACC.Doubleshot = set_combine(sets.Midshot.Annihilator.MidACC,{head="Oshosi Mask",body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Oshosi Leggings"})
+			   sets.Midshot.Annihilator.MidACC.Doubleshot = set_combine(sets.Midshot.Annihilator.MidACC,{body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Osh. Leggings +1"})
 			   
-			   sets.Midshot.Annihilator.HighACC.Doubleshot = set_combine(sets.Midshot.Annihilator.HighACC,{head="Oshosi Mask",body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Oshosi Leggings"})
+			   sets.Midshot.Annihilator.HighACC.Doubleshot = set_combine(sets.Midshot.Annihilator.HighACC,{body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Osh. Leggings +1"})
 			   
-			   sets.Midshot.Annihilator.Aftermath.Doubleshot = {head="Oshosi Mask",neck="Iskur Gorget",ear1="Enervating Earring",ear2="Telos Earring",body="Arc. Jerkin +3",hands="Mummu Wrists +2",ring1="Begrudging Ring",ring2="Mummu Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','Crit.hit rate+10','Damage taken-5%',}},waist="K. Kachina Belt +1",legs="Oshosi Trousers",feet="Oshosi Leggings"}
+			   sets.Midshot.Annihilator.Aftermath.Doubleshot = {head="Arcadian Beret +3",neck="Iskur Gorget",ear1="Enervating Earring",ear2="Telos Earring",body="Arc. Jerkin +3",hands="Mummu Wrists +2",ring1="Begrudging Ring",ring2="Mummu Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Crit.hit rate+10','Damage taken-5%',}},waist="K. Kachina Belt +1",legs="Oshosi Trousers",feet="Osh. Leggings +1"}
+			   
+			   sets.Midshot.Annihilator.PDL.Doubleshot = set_combine(sets.Midshot.Annihilator.Doubleshot,{legs="Malignance Tights"})
 			   
 			   --Gandiva Doubleshot Sets--
-			   sets.Midshot.Gandiva.Doubleshot = set_combine(sets.Midshot.Gandiva,{head="Oshosi Mask",body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Oshosi Leggings"})
+			   sets.Midshot.Gandiva.Doubleshot = set_combine(sets.Midshot.Gandiva,{body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Osh. Leggings +1"})
 			   
-			   sets.Midshot.Gandiva.MidACC.Doubleshot = set_combine(sets.Midshot.Gandiva.MidACC,{head="Oshosi Mask",body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Oshosi Leggings"})
+			   sets.Midshot.Gandiva.MidACC.Doubleshot = set_combine(sets.Midshot.Gandiva.MidACC,{body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Osh. Leggings +1"})
 			   
-			   sets.Midshot.Gandiva.HighACC.Doubleshot = set_combine(sets.Midshot.Gandiva.HighACC,{head="Oshosi Mask",body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Oshosi Leggings"})
+			   sets.Midshot.Gandiva.HighACC.Doubleshot = set_combine(sets.Midshot.Gandiva.HighACC,{body="Arc. Jerkin +3",legs="Oshosi Trousers",feet="Osh. Leggings +1"})
 			   
-			   sets.Midshot.Gandiva.Aftermath.Doubleshot = {head="Oshosi Mask",neck="Iskur Gorget",ear1="Enervating Earring",ear2="Telos Earring",body="Arc. Jerkin +3",hands="Mummu Wrists +2",ring1="Begrudging Ring",ring2="Mummu Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','Crit.hit rate+10','Damage taken-5%',}},waist="K. Kachina Belt +1",legs="Oshosi Trousers",feet="Oshosi Leggings"}
+			   sets.Midshot.Gandiva.Aftermath.Doubleshot = {head="Arcadian Beret +3",neck="Iskur Gorget",ear1="Enervating Earring",ear2="Telos Earring",body="Arc. Jerkin +3",hands="Mummu Wrists +2",ring1="Begrudging Ring",ring2="Mummu Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Crit.hit rate+10','Damage taken-5%',}},waist="K. Kachina Belt +1",legs="Oshosi Trousers",feet="Osh. Leggings +1"}
+			   
+			   sets.Midshot.Gandiva.PDL.Doubleshot = set_combine(sets.Midshot.Gandiva.Doubleshot,{legs="Malignance Tights"})
 			   
 			   --Camouflage Sets--
 			   sets.Midshot.Camouflage = {}
 			   
-			   sets.Midshot.FailNot.Camouflage = {head="Meghanada Visor +2",neck="Iskur Gorget",ear1="Enervating Earring",body="Meghanada Cuirie +2",hands="Mummu Wrists +2",ring1="Begrudging Ring",ring2="Mummu Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','Crit.hit rate+10','Damage taken-5%',}},waist="K. Kachina Belt +1",legs="Darraigner's Brais",feet="Thereoid Greaves"}
+			   sets.Midshot.FailNot.Camouflage = {head="Meghanada Visor +2",neck="Iskur Gorget",ear1="Enervating Earring",body="Meghanada Cuirie +2",hands="Mummu Wrists +2",ring1="Begrudging Ring",ring2="Mummu Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Crit.hit rate+10','Damage taken-5%',}},waist="K. Kachina Belt +1",legs="Darraigner's Brais",feet="Osh. Leggings +1"}
 			   
-			   sets.Midshot.Yoichinoyumi.Camouflage = {head="Meghanada Visor +2",neck="Iskur Gorget",ear1="Enervating Earring",body="Meghanada Cuirie +2",hands="Mummu Wrists +2",ring1="Begrudging Ring",ring2="Mummu Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','Crit.hit rate+10','Damage taken-5%',}},waist="K. Kachina Belt +1",legs="Darraigner's Brais",feet="Thereoid Greaves"}
+			   sets.Midshot.Yoichinoyumi.Camouflage = {head="Meghanada Visor +2",neck="Iskur Gorget",ear1="Enervating Earring",body="Meghanada Cuirie +2",hands="Mummu Wrists +2",ring1="Begrudging Ring",ring2="Mummu Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Crit.hit rate+10','Damage taken-5%',}},waist="K. Kachina Belt +1",legs="Darraigner's Brais",feet="Osh. Leggings +1"}
 			   
-			   sets.Midshot.Fomalhaut.Camouflage = {head="Meghanada Visor +2",neck="Iskur Gorget",ear1="Enervating Earring",body="Meghanada Cuirie +2",hands="Mummu Wrists +2",ring1="Begrudging Ring",ring2="Mummu Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','Crit.hit rate+10','Damage taken-5%',}},waist="K. Kachina Belt +1",legs="Darraigner's Brais",feet="Thereoid Greaves"}
+			   sets.Midshot.Fomalhaut.Camouflage = {head="Meghanada Visor +2",neck="Iskur Gorget",ear1="Enervating Earring",body="Meghanada Cuirie +2",hands="Mummu Wrists +2",ring1="Begrudging Ring",ring2="Mummu Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Crit.hit rate+10','Damage taken-5%',}},waist="K. Kachina Belt +1",legs="Darraigner's Brais",feet="Osh. Leggings +1"}
 			   
-			   sets.Midshot.Armageddon.Camouflage = {head="Meghanada Visor +2",neck="Iskur Gorget",ear1="Enervating Earring",body="Meghanada Cuirie +2",hands="Mummu Wrists +2",ring1="Begrudging Ring",ring2="Mummu Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','Crit.hit rate+10','Damage taken-5%',}},waist="K. Kachina Belt +1",legs="Darraigner's Brais",feet="Thereoid Greaves"}
+			   sets.Midshot.Armageddon.Camouflage = {head="Meghanada Visor +2",neck="Iskur Gorget",ear1="Enervating Earring",body="Meghanada Cuirie +2",hands="Mummu Wrists +2",ring1="Begrudging Ring",ring2="Mummu Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Crit.hit rate+10','Damage taken-5%',}},waist="K. Kachina Belt +1",legs="Darraigner's Brais",feet="Osh. Leggings +1"}
 			   
-			   sets.Midshot.Annihilator.Camouflage = {head="Meghanada Visor +2",neck="Iskur Gorget",ear1="Enervating Earring",body="Meghanada Cuirie +2",hands="Mummu Wrists +2",ring1="Begrudging Ring",ring2="Mummu Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','Crit.hit rate+10','Damage taken-5%',}},waist="K. Kachina Belt +1",legs="Darraigner's Brais",feet="Thereoid Greaves"}
+			   sets.Midshot.Annihilator.Camouflage = {head="Meghanada Visor +2",neck="Iskur Gorget",ear1="Enervating Earring",body="Meghanada Cuirie +2",hands="Mummu Wrists +2",ring1="Begrudging Ring",ring2="Mummu Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Crit.hit rate+10','Damage taken-5%',}},waist="K. Kachina Belt +1",legs="Darraigner's Brais",feet="Osh. Leggings +1"}
 			   
-			   sets.Midshot.Gastraphetes.Camouflage = {head="Meghanada Visor +2",neck="Iskur Gorget",ear1="Enervating Earring",body="Meghanada Cuirie +2",hands="Mummu Wrists +2",ring1="Begrudging Ring",ring2="Mummu Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','Crit.hit rate+10','Damage taken-5%',}},waist="K. Kachina Belt +1",legs="Darraigner's Brais",feet="Thereoid Greaves"}
+			   sets.Midshot.Gastraphetes.Camouflage = {head="Meghanada Visor +2",neck="Iskur Gorget",ear1="Enervating Earring",body="Meghanada Cuirie +2",hands="Mummu Wrists +2",ring1="Begrudging Ring",ring2="Mummu Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Crit.hit rate+10','Damage taken-5%',}},waist="K. Kachina Belt +1",legs="Darraigner's Brais",feet="Osh. Leggings +1"}
 			   
-			   sets.Midshot.Gandiva.Camouflage = {head="Meghanada Visor +2",neck="Iskur Gorget",ear1="Enervating Earring",body="Meghanada Cuirie +2",hands="Mummu Wrists +2",ring1="Begrudging Ring",ring2="Mummu Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','Crit.hit rate+10','Damage taken-5%',}},waist="K. Kachina Belt +1",legs="Darraigner's Brais",feet="Thereoid Greaves"}
+			   sets.Midshot.Gandiva.Camouflage = {head="Meghanada Visor +2",neck="Iskur Gorget",ear1="Enervating Earring",body="Meghanada Cuirie +2",hands="Mummu Wrists +2",ring1="Begrudging Ring",ring2="Mummu Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Crit.hit rate+10','Damage taken-5%',}},waist="K. Kachina Belt +1",legs="Darraigner's Brais",feet="Osh. Leggings +1"}
 				
 				-- PDT/MDT/TH Sets --
                 sets.PDT = {
-					head="Meghanada Visor +2",
-					body="Meg. Cuirie +2",
+					head="Malignance Chapeau",
+					body="Malignance Tabard",
 					hands="Meg. Gloves +2",
-					legs="Mummu Kecks +2",
-					feet="Jute Boots +1",
+					legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
+					feet="Malignance Boots",
 					neck="Loricate Torque +1",
 					waist="Flume Belt +1",
 					left_ear="Etiolation Earring",
-					right_ear="Eabani Earring",
-					left_ring="Patricius Ring",
+					right_ear="Genmei Earring",
+					left_ring="Meghanada Ring",
 					right_ring="Defending Ring",
-					back="Moonlight Cape"}
+					back="Moonlight Cape",}
          
                 sets.MDT = {
-								head="Dampening Tam",neck="Loricate Torque +1",body="Nisroch Jerkin",hands="Volte Bracers",ring1="Purity Ring",ring2="Defending Ring",legs="Mummu Kecks +2",feet="Oshosi Leggings",waist="Flax Sash",back="Moonlight Cape",ear1="Etiolation Earring",ear2="Static Earring"}
+								head="Malignance Chapeau",neck="Loricate Torque +1",body="Malignance Tabard",hands="Volte Bracers",ring1="Purity Ring",ring2="Defending Ring",legs="Malignance Tights",feet="Malignance Boots",waist="Flax Sash",back="Moonlight Cape",ear1="Etiolation Earring",ear2="Hearty Earring"}
 				
 				sets.TH = {head={ name="Adhemar Bonnet +1", augments={'STR+12','DEX+12','Attack+20',}},
-							body="Adhemar Jacket",
+							body={ name="Adhemar Jacket +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
 							legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
 							feet={ name="Taeon Boots", augments={'Accuracy+20 Attack+20','"Triple Atk."+2','STR+4 DEX+4',}},
 							neck="Combatant's Torque",
@@ -441,15 +488,53 @@ function get_sets()
 							right_ring="Chirich Ring",
 							back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10',}}}
 				
+				
+				
                 -- Melee Sets --
                 sets.Melee = {
-                                head={ name="Adhemar Bonnet +1", augments={'STR+12','DEX+12','Attack+20',}},neck="Anu torque",ear1="Sherida Earring",ear2="Eabani Earring",body="Adhemar Jacket",hands="Floral Gauntlets",ring1="Hetairoi Ring",ring2="Chirich Ring",back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Damage taken-5%',}},waist="Windbuffet Belt +1",legs="Carmine Cuisses +1",feet={ name="Herculean Boots", augments={'Accuracy+22','"Triple Atk."+3',}}}
+                                head={ name="Adhemar Bonnet +1", augments={'STR+12','DEX+12','Attack+20',}},
+								neck="Anu torque",
+								ear1="Suppanomimi",
+								ear2="Eabani Earring",
+								body={ name="Adhemar Jacket +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+								hands="Floral Gauntlets",
+								ring1="Hetairoi Ring",
+								ring2="Chirich Ring",
+								back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Damage taken-5%',}},
+								waist="Windbuffet Belt +1",
+								legs="Carmine Cuisses +1",
+								feet={ name="Taeon Boots", augments={'Accuracy+20 Attack+20','"Triple Atk."+2','STR+4 DEX+4',}}}
                                
                 sets.Melee.MidACC = set_combine(sets.Melee,{neck="Combatant's Torque"})
                  
-                sets.Melee.HighACC = set_combine(sets.Melee.MidACC,{feet="Meg. Jam. +2"})
+                sets.Melee.HighACC = {
+					head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}},
+					body={ name="Adhemar Jacket +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+					hands={ name="Floral Gauntlets", augments={'Rng.Acc.+15','Accuracy+15','"Triple Atk."+3','Magic dmg. taken -4%',}},
+					legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
+					feet="Malignance Boots",
+					neck="Combatant's Torque",
+					waist="Kentarch Belt +1",
+					left_ear="Sherida Earring",
+					right_ear="Eabani Earring",
+					left_ring="Cacoethic Ring +1",
+					right_ring="Chirich Ring",
+					back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Damage taken-5%',}},}
 				
-				sets.Melee.Aftermath = set_combine(sets.Melee,{body={ name="Herculean Vest", augments={'Accuracy+24 Attack+24','"Triple Atk."+4','AGI+2','Accuracy+7',}},ear2="Brutal Earring"})
+				sets.Melee.Aftermath = {head={ name="Adhemar Bonnet +1", augments={'STR+12','DEX+12','Attack+20',}},
+					body={ name="Adhemar Jacket +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+					hands={ name="Adhemar Wrist. +1", augments={'STR+12','DEX+12','Attack+20',}},
+					legs="Meg. Chausses +2",
+					feet={ name="Herculean Boots", augments={'Accuracy+22','"Triple Atk."+3',}},
+					neck="Anu Torque",
+					waist="Kentarch Belt +1",
+					left_ear="Sherida Earring",
+					right_ear="Suppanomimi",
+					left_ring="Hetairoi Ring",
+					right_ring="Chirich Ring",
+					back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Damage taken-5%',}},}
+					
+				sets.Melee.PDL = sets.Melee.Aftermath
          
                 -- WS Base Set --
                 sets.WS = {}
@@ -468,6 +553,8 @@ function get_sets()
 				
 				sets.WS['Apex Arrow'].Aftermath = sets.WS['Apex Arrow']
 				
+				sets.WS['Apex Arrow'].PDL = set_combine(sets.WS['Apex Arrow'],{body="Malignance Tabard",neck="Scout's Gorget +1"})
+				
 				-- Namas Arrow Sets --
 				sets.WS['Namas Arrow'] = set_combine(sets.WS,{
 				                head="Orion Beret +3",neck="Fotia Gorget",body={ name="Herculean Vest", augments={'Rng.Acc.+26','Weapon skill damage +3%','AGI+15',}},hands="Meg. Gloves +2",ring1="Regal Ring",ring2="Ilabrat Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%',}},waist="Fotia Belt",legs="Arc. Braccae +3",feet={ name="Herculean Boots", augments={'Rng.Atk.+10','Weapon skill damage +4%','AGI+9','Rng.Acc.+2',}}})
@@ -480,22 +567,25 @@ function get_sets()
 				
 				sets.WS['Namas Arrow'].Aftermath = sets.WS['Namas Arrow']
 				
+				sets.WS['Namas Arrow'].PDL = set_combine(sets.WS['Namas Arrow'],{neck="Scout's Gorget +1",body="Malignance Tabard"})
+				
 				
                 -- Jishnu's Radiance --
-                sets.WS["Jishnu's Radiance"] = set_combine(sets.WS, {
-                                head={ name="Adhemar Bonnet +1", augments={'STR+12','DEX+12','Attack+20',}},neck="Fotia Gorget",ear1="Sherida Earring",ear2="Moonshade Earring",body="Meg. Cuirie +2",hands="Mummu Wrists +2",ring1="Begrudging Ring",ring2="Ilabrat Ring",back={ name="Belenus's Cape", augments={'DEX+20','Rng.Acc.+20 Rng.Atk.+20','Crit.hit rate+10',}},waist="Fotia Belt",legs="Darraigner's Brais",feet="Thereoid greaves"})
+                sets.WS["Jishnu's Radiance"] = {
+                                head={ name="Adhemar Bonnet +1", augments={'STR+12','DEX+12','Attack+20',}},neck="Fotia Gorget",ear1="Sherida Earring",ear2="Moonshade Earring",body="Meg. Cuirie +2",hands="Mummu Wrists +2",ring1="Mummu Ring",ring2="Regal Ring",back={ name="Belenus's Cape", augments={'DEX+20','Rng.Acc.+20 Rng.Atk.+20','DEX+10','Crit.hit rate+10',}},waist="Fotia Belt",legs="Darraigner's Brais",feet="Osh. Leggings +1"}
                
-                sets.WS["Jishnu's Radiance"].MidACC = set_combine(sets.WS	["Jishnu's Radiance"],{
-								feet="Mummu Gamash. +1",
-								ear1="Telos Earring"})
-                sets.WS["Jishnu's Radiance"].HighACC = set_combine(sets.WS["Jishnu's Radiance"].MidACC,{
-                                })
+                sets.WS["Jishnu's Radiance"].MidACC = set_combine(sets.WS["Jishnu's Radiance"],{
+								head="Mummu Bonnet +2",
+								ear2="Telos Earring"})
+                sets.WS["Jishnu's Radiance"].HighACC = set_combine(sets.WS["Jishnu's Radiance"].MidACC,{legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},})
 				
-				sets.WS["Jishnu's Radiance"].Aftermath = sets.WS["Jishnu's Radiance"]
+				sets.WS["Jishnu's Radiance"].Aftermath = set_combine(sets.WS["Jishnu's Radiance"],{legs="Jokushu Haidate"})
+				
+				sets.WS["Jishnu's Radiance"].PDL = set_combine(sets.WS["Jishnu's Radiance"],{legs="Jokushu Haidate"})
      
                 -- Last Stand --
                 sets.WS['Last Stand'] = set_combine(sets.WS, {
-                                head="Orion Beret +3",neck="Fotia Gorget",ear1="Ishvara Earring",ear2="Moonshade Earring",body={ name="Herculean Vest", augments={'Rng.Acc.+26','Weapon skill damage +3%','AGI+15',}},hands="Meg. Gloves +2",ring1="Regal Ring",ring2="Dingir Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%',}},waist="Fotia Belt",legs="Arc. Braccae +3",feet={ name="Herculean Boots", augments={'Rng.Atk.+10','Weapon skill damage +4%','AGI+9','Rng.Acc.+2',}}})
+                                head="Orion Beret +3",neck="Scout's Gorget +1",ear1="Ishvara Earring",ear2="Moonshade Earring",body={ name="Herculean Vest", augments={'Rng.Acc.+26','Weapon skill damage +3%','AGI+15',}},hands="Meg. Gloves +2",ring1="Regal Ring",ring2="Dingir Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%',}},waist="Fotia Belt",legs="Arc. Braccae +3",feet={ name="Herculean Boots", augments={'Rng.Atk.+10','Weapon skill damage +4%','AGI+9','Rng.Acc.+2',}}})
                
                 sets.WS['Last Stand'].MidACC = set_combine(sets.WS["Last Stand"],{
 								ring2="Cacoethic Ring +1"})
@@ -505,40 +595,47 @@ function get_sets()
 								
 				sets.WS['Last Stand'].Aftermath = sets.WS['Last Stand']
 				
+				sets.WS['Last Stand'].PDL = set_combine(sets.WS['Last Stand'],{neck="Scout's Gorget +1",body="Malignance Tabard"})
+				
 				--Coronach--
-				sets.WS['Coronach'] = set_combine(sets.WS['Last Stand'], {ring2="Ilabrat Ring",})
+				sets.WS['Coronach'] = set_combine(sets.WS['Last Stand'], {ear2="Sherida Earring",ring2="Ilabrat Ring",})
 				
 				sets.WS['Coronach'].MidACC = set_combine(sets.WS['Last Stand'].MidACC, {ring2="Ilabrat Ring"})
 				
 				sets.WS['Coronach'].HighACC = set_combine(sets.WS['Last Stand'].HighACC, {})
 				
+				sets.WS['Coronach'].Aftermath = sets.WS['Coronach']
+				
+				sets.WS['Coronach'].PDL = set_combine(sets.WS['Coronach'],{neck="Scout's Gorget +1",body="Malignance Tabard"})
+				
 					
 				-- Trueflight --
 				sets.WS['Trueflight'] = {
-				head="Orion Beret +3",
-					--{name="Herculean Helm", augments={'Mag. Acc.+13 "Mag.Atk.Bns."+13','Weapon skill damage +4%','Mag. Acc.+3','"Mag.Atk.Bns."+5',}},
+				head={ name="Herculean Helm", augments={'Mag. Acc.+19 "Mag.Atk.Bns."+19','Phys. dmg. taken -1%','AGI+2','Mag. Acc.+14','"Mag.Atk.Bns."+10',}},
+					--"Orion Beret +3",--
 					body={ name="Herculean Vest", augments={'Attack+2','"Mag.Atk.Bns."+18','Weapon skill damage +6%','Accuracy+7 Attack+7','Mag. Acc.+2 "Mag.Atk.Bns."+2',}},--"Samnuha Coat",
 					hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},
 					legs="Arc. Braccae +3",--{ name="Herculean Trousers", augments={'Pet: "Dbl.Atk."+2 Pet: Crit.hit rate +2','Blood Pact Dmg.+6','Weapon skill damage +5%','Accuracy+6 Attack+6','Mag. Acc.+20 "Mag.Atk.Bns."+20',}},--
 					feet={ name="Herculean Boots", augments={'Pet: Attack+28 Pet: Rng.Atk.+28','"Mag.Atk.Bns."+28','Accuracy+13 Attack+13','Mag. Acc.+19 "Mag.Atk.Bns."+19',}},--{ name="Herculean Boots", augments={'Weapon skill damage +5%','INT+1','Mag. Acc.+2','"Mag.Atk.Bns."+15',}},--
 					neck="Baetyl Pendant",
-					waist="Svelt. Gouriz +1",
+					waist="Hachirin-no-Obi",
 					left_ear="Friomisi Earring",
 					right_ear={ name="Moonshade Earring", augments={'MP+25','TP Bonus +25',}},
 					left_ring="Weather. Ring",
 					right_ring="Dingir Ring",
 					back={ name="Belenus's Cape", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}}}
 								
-				sets.WS['Trueflight'].MidACC = set_combine(sets.WS['Trueflight'],{
-								body="Samnuha Coat",ear1="Digni. Earring"})
+				sets.WS['Trueflight'].MidACC = set_combine(sets.WS['Trueflight'],{body="Samnuha Coat",ear1="Digni. Earring"})
 								
 				sets.WS['Trueflight'].HighACC = set_combine(sets.WS['Trueflight'].MidACC,{
 								neck="Sanctity Necklace"})
 				
 				sets.WS['Trueflight'].Aftermath = sets.WS['Trueflight']
 				
+				sets.WS['Trueflight'].PDL = sets.WS['Trueflight']
+				
 				-- Wildfire --
-				sets.WS['Wildfire'] = set_combine(sets.WS['Trueflight'],{ring1="Ilabrat Ring",ear2="Novio earring",})
+				sets.WS['Wildfire'] = set_combine(sets.WS['Trueflight'],{{ name="Herculean Helm", augments={'Mag. Acc.+19 "Mag.Atk.Bns."+19','Phys. dmg. taken -1%','AGI+2','Mag. Acc.+14','"Mag.Atk.Bns."+10',}},waist="Eschan Stone",ring1="Ilabrat Ring",ear2="Novio earring",})
 				
 				sets.WS['Wildfire'].MidACC = set_combine(sets.WS['Wildfire'],{ear1="Digni. Earring"})
 				
@@ -546,6 +643,9 @@ function get_sets()
 				
 				sets.WS['Wildfire'].Aftermath = sets.WS['Wildfire']
 				
+				sets.WS['Wildfire'].PDL = sets.WS['Wildfire']
+				
+				--Hot Shot--
 				sets.WS['Hot Shot'] = set_combine(sets.WS['Trueflight'],{neck="Fotia Gorget",waist="Fotia Belt",left_ring="Regal Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%',}}})
 				
 				sets.WS['Hot Shot'].MidACC = set_combine(sets.WS['Hot Shot'],{legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}}})
@@ -554,6 +654,8 @@ function get_sets()
 				
 				sets.WS['Hot Shot'].Aftermath = sets.WS['Hot Shot']
 				
+				sets.WS['Hot Shot'].PDL	= sets.WS['Hot Shot']
+				
 				-- Dagger Weapon Skills --
 				
 				sets.WS['Exenterator'] = {
@@ -561,13 +663,27 @@ function get_sets()
 				
 				sets.WS['Evisceration'] = sets.WS['Exenterator']
 				
-				sets.WS['Aeolian Edge'] = sets.WS['Hot Shot']
+				sets.WS['Aeolian Edge'] = set_combine(sets.WS['Hot Shot'],{waist="Orpheus's Sash"})
 				              
+							  
+				sets.WS.Decimation = {head={ name="Adhemar Bonnet +1", augments={'STR+12','DEX+12','Attack+20',}},
+					body={ name="Adhemar Jacket +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+					hands={ name="Adhemar Wrist. +1", augments={'STR+12','DEX+12','Attack+20',}},
+					legs="Meg. Chausses +2",
+					feet="Thereoid Greaves",
+					neck="Fotia Gorget",
+					waist="Fotia Belt",
+					left_ear="Sherida Earring",
+					right_ear="Telos Earring",
+					left_ring="Regal Ring",
+					right_ring="Ilabrat Ring",
+					back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Damage taken-5%',}},}
+					
          
                 -- JA Sets --
                 sets.JA = {}
                 sets.JA.Shadowbind = {
-                                head="Orion Beret +3",neck="Iskur Gorget",ear1="Enervating Earring",ear2="Telos Earring",body="Nisroch Jerkin",hands="Orion Bracers +3",ring1="Regal Ring",ring2="Cacoethic Ring +1",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','"Store TP"+10','Damage taken-5%',}},waist="Yemaya Belt",legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},feet="Meg. Jam. +2"}
+                                head="Orion Beret +3",neck="Iskur Gorget",ear1="Enervating Earring",ear2="Telos Earring",body="Nisroch Jerkin",hands="Orion Bracers +3",ring1="Regal Ring",ring2="Cacoethic Ring +1",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','"Store TP"+10','Damage taken-5%',}},waist="Yemaya Belt",legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},feet="Orion Socks +3"}
          
                 sets.JA.Scavenge = {feet="Orion Socks +3"}
                
@@ -575,7 +691,7 @@ function get_sets()
                
                 sets.JA.Sharpshot = {legs="Orion Braccae +2"}
                
-                sets.JA["Bounty Shot"] = {hands="Amini Glove. +1",waist="Chaac Belt"}
+                sets.JA["Bounty Shot"] = {hands="Amini Glove. +1",waist="Chaac Belt",legs="Volte Hose"}
                
                 sets.JA["Double Shot"] = {head="Amini Gapette +1"}
                
@@ -667,13 +783,21 @@ function get_sets()
 												equipSet = set_combine(equipSet,{ear2="Novio Earring"})
 										end
                                 end
-								
-						if spell.english == 'Trueflight' and (world.weather_element == 'Light' or world.day_element == 'Light') then
+						
+						if spell.english == 'Trueflight' and spell.target.distance <8 then
+							equipSet = set_combine(equipSet,{waist="Orpheus's Sash"})
+				
+						
+						elseif spell.english == 'Trueflight' and (world.weather_element == 'Light' or world.day_element == 'Light') then
 						add_to_chat(125,'weather mode') 
 						equipSet = set_combine(equipSet,{waist="Hachirin-no-Obi"})
 					
 				end
-						if spell.english == 'Wildfire' and (world.weather_element == 'Fire' or world.day_element == 'Fire') then
+				
+						if spell.english == 'Wildfire' and spell.target.distance <8 then
+							equipSet = set_combine(equipSet,{waist="Orpheus's Sash"})
+				
+						elseif spell.english == 'Wildfire' and (world.weather_element == 'Fire' or world.day_element == 'Fire') then
 						add_to_chat(125,'weather mode')
 						equipSet = set_combine(equipSet,{waist="Hachirin-no-Obi"})
 				end
@@ -716,7 +840,7 @@ function get_sets()
                         if equipSet[AccArray[AccIndex]] then
                                 equipSet = equipSet[AccArray[AccIndex]]
                         end
-						
+							
 						
                         if buffactive.Barrage and equipSet["Barrage"] then
                                 equipSet = equipSet["Barrage"]
@@ -757,12 +881,10 @@ function get_sets()
         
          
         function aftercast(spell,action)
-                if spell.type == "WeaponSkill" and not spell.interrupted then
-                        send_command('wait 0.2;gs c TP')
-                else
+                
                         status_change(player.status)
-                end
         end
+        
          
         function status_change(new,old)
                 if Armor == 'PDT' then
